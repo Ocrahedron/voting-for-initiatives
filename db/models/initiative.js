@@ -4,9 +4,10 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class Initiative extends Model {
-    static associate({ User }) {
+    static associate({ User, Coord }) {
       this.belongsToMany(User, { foreignKey: 'Initiative_id', through: 'Voites', as: 'Voite' });
       this.hasMany(User, { foreignKey: 'User_id', as: 'creator' });
+      this.hasOne(Coord, { foreignKey: 'Initiative_id' });
     }
   }
   Initiative.init({
