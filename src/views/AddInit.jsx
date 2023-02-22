@@ -267,7 +267,6 @@ function AddInit({ username }) {
           </div>
         </section>
       </div>
-      <script src="assets/bootstrap/js/bootstrap.min.js" />
     </Layout>
   );
 }
