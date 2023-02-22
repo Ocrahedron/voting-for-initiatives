@@ -7,9 +7,20 @@ module.exports = function Layout({ children, user }) {
         <meta charset="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/Roboto.css" />
+        <link rel="stylesheet" href="/css/Roboto%20Slab.css" />
+        <link rel="stylesheet" href="/css/Banner-Heading-Image-images.css" />
+        <link rel="stylesheet" href="/css/Black-Navbar.css" />
+        <link rel="stylesheet" href="/css/Login-with-overlay-image.css" />
+        <link
+          rel="stylesheet"
+          href="/css/Navbar-Centered-Brand-Dark-icons.css"
+        />
+        <script defer src="/js/bootstrap.min.js" />
         <title>Document</title>
       </head>
-      <body>
+      <body style={{ background: 'var(--bs-gray-600)' }}>
         <nav className="navbar navbar-dark navbar-expand-md bg-dark py-3">
           <div className="container">
             <a className="navbar-brand d-flex align-items-center" href="#">
