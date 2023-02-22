@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js --ext js,jsx --ignore sessions"
+    "dev": "nodemon src/app.js --ext js,jsx --ignore sessions",
+    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,8 @@
     "express-session": "^1.17.3",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
     "pg": "^8.9.0",
     "pg-hstore": "^2.3.4",
     "react": "^18.2.0",
