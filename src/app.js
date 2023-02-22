@@ -7,6 +7,11 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 
+const mainRouter = require('../src/routes/main.routes');
+const initRouter = require('../src/routes/init.routes');
+const profileRouter = require('../src/routes/profile.routes');
+const addInitRouter = require('../src/routes/addInit.routes');
+
 const app = express();
 
 const sessionConfig = {
@@ -33,6 +38,11 @@ app.use((req, res, next) => {
   res.locals.user = req.session?.user;
   next();
 });
+
+app.use('/', mainRouter);
+app.use('/', profileRouter);
+app.use('/', addInitRouter);
+app.use('/', initRouter);
 
 const PORT = process.env.PORT ?? 3000;
 app.listen(PORT, () => {
