@@ -3,8 +3,12 @@ require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
-const passport = require('passport');
-const session = require('express-session');
+
+const mainRouter = require('../src/routes/main.routes');
+const initRouter = require('../src/routes/init.routes');
+const profileRouter = require('../src/routes/profile.routes');
+const addInitRouter = require('../src/routes/addInit.routes');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -48,6 +52,12 @@ app.use('/api', ApiRouter);
 app.use('/auth', GoogleRouter);
 
 
+app.use('/', mainRouter);
+app.use('/', profileRouter);
+app.use('/', addInitRouter);
+app.use('/', initRouter);
+
+const PORT = process.env.PORT ?? 3000;
 app.listen(PORT, () => {
   console.log('server running');
 });
