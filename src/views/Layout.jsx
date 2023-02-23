@@ -4,7 +4,7 @@ module.exports = function Layout({ children, user }) {
   return (
     <html lang="ru">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -17,7 +17,6 @@ module.exports = function Layout({ children, user }) {
           rel="stylesheet"
           href="/css/Navbar-Centered-Brand-Dark-icons.css"
         />
-        <script defer src="/js/bootstrap.min.js" />
         <title>Document</title>
       </head>
       <body style={{ background: 'var(--bs-gray-600)' }}>
@@ -62,6 +61,7 @@ module.exports = function Layout({ children, user }) {
           </div>
         </nav>
         {children}
+        <script defer src="/js/bootstrap.min.js" />
       </body>
     </html>
   );
