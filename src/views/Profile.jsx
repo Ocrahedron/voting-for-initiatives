@@ -6,7 +6,7 @@ function Profile({ username }) {
     <Layout username={username}>
       <div
         style={{
-          maxWidth: '940px',
+          maxWidth: '941px',
           margin: '0 auto',
           padding: '0 0 180px',
           paddingLeft: '10px',

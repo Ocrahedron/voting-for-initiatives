@@ -11,7 +11,13 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
       },
+      category: {
+        type: Sequelize.STRING,
+      },
       body: {
+        type: Sequelize.STRING,
+      },
+      level: {
         type: Sequelize.STRING,
       },
       voites_no: {

@@ -7,10 +7,10 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 
-const mainRouter = require('../src/routes/main.routes');
-const initRouter = require('../src/routes/init.routes');
-const profileRouter = require('../src/routes/profile.routes');
-const addInitRouter = require('../src/routes/addInit.routes');
+const mainRouter = require('./routes/main.routes');
+const initRouter = require('./routes/init.routes');
+const profileRouter = require('./routes/profile.routes');
+const addInitRouter = require('./routes/addInit.routes');
 
 const app = express();
 

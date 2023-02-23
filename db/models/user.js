@@ -4,9 +4,9 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate({ Initiatives }) {
-      this.belongsToMany(Initiatives, { foreignKey: 'User_id', through: 'Voites', as: 'Voite' });
-      this.hasMany(Initiatives, { foreignKey: 'User_id', as: 'creator' });
+    static associate({ Initiative, Voite }) {
+      this.belongsToMany(Initiative, { foreignKey: 'user_id', through: Voite });
+      this.hasMany(Initiative, { foreignKey: 'user_id', as: 'creator' });
     }
   }
   User.init({
