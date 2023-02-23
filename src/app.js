@@ -31,7 +31,7 @@ app.use(express.json());
 const sessionConfig = {
   name: 'sid',
   store: new FileStore({}),
-  secret: process.env.SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   httpOnly: true,

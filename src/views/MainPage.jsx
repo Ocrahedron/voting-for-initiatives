@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function MainPage({ username }) {
+function MainPage({ username, allInit }) {
   return (
     <Layout username={username}>
       <div className="mx-auto" style={{ maxWidth: '940px' }}>
@@ -64,74 +64,11 @@ function MainPage({ username }) {
                     <input type="checkbox" />
                     &nbsp;Инфраструктура города
                   </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Жилые дома и дворы
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Безопасность
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Бизнес
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Потребители и сервис
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Чиновники и гос. услуги
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Население и миграция
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Избирательное право
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Экономика и финансы
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Здравоохранение
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Образование и наука
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Уголовный кодекс
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Государственное управление
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;ЖКХ, УК, ТСЖ
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Государственная поддержка
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Труд и занятость
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp;Социальная защита
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
+          {allInit?.map(el => (
           <div className="d-inline-block">
             <div>
               <div
@@ -195,7 +132,7 @@ function MainPage({ username }) {
                     }}
                   >
                     <a
-                      href="#"
+                      href={`/initPage/${el.id}`}
                       style={{
                         border: '0',
                         fontSize: '100%',
@@ -205,8 +142,7 @@ function MainPage({ username }) {
                         padding: '0',
                       }}
                     >
-                      Уголовная ответственность за похищение ребенка бывшим
-                      супругом отдельно проживающим
+                      {el.title}
                     </a>
                   </div>
                   <div
@@ -218,7 +154,7 @@ function MainPage({ username }) {
                       bottom: '30px',
                     }}
                   >
-                    <small>Уровень инициативы: Федеральный</small>
+                    <small>Уровень инициативы: {el.level}</small>
                   </div>
                   <div
                     style={{
@@ -231,12 +167,13 @@ function MainPage({ username }) {
                       bottom: '10px',
                     }}
                   >
-                    <strong>Всего 1435 голоса</strong>
+                    <strong>Всего {el.voites_yes + el.voites_no} голоса</strong>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          ))}
         </section>
       </div>
     </Layout>

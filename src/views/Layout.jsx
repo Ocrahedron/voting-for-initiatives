@@ -24,6 +24,7 @@ module.exports = function Layout({ children, user }) {
         <script defer src="/js/myRedirect.js" />
         <script defer src="/js/mySubmit.js" />
         <script defer src="/js/application.js" />
+        <script defer src="/js/initPage.js" />
         <title>Votes</title>
       </head>
       <body>

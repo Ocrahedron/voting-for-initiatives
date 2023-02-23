@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     level: DataTypes.STRING,
     voites_no: DataTypes.INTEGER,
     voites_yes: DataTypes.INTEGER,
-    data_end: DataTypes.STRING,
+    data_end: DataTypes.DATEONLY,
     user_id: DataTypes.INTEGER,
     status: DataTypes.STRING,
   }, {
