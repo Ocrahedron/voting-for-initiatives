@@ -18,14 +18,16 @@ module.exports = function Layout({ children, user }) {
           defer
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         /> */}
-        <script defer src="/js/myRedirect.js" />
+        {/* <script defer src="/js/myRedirect.js" />
         <script defer src="/js/mySubmit.js" />
-        <script defer src="/js/application.js" />
+        <script defer src="/js/application.js" /> */}
         <title>Votes</title>
       </head>
       <body style={{background: 'var(--bs-gray-600)'}}>
+      
         <Navbar user={user} />
         {children}
+      
       </body>
     </html>
   );

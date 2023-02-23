@@ -34,7 +34,7 @@ const renderRegistrationPage = async (req, res) => {
 const register = async (req, res) => {
   try {
     const {
-      email, password, firstName, lastName,middleName
+      email, password, firstName, lastName, middleName,
     } = req.body;
     if (email && password && firstName && lastName && middleName) {
       const salt = await bcrypt.genSalt(10);
@@ -45,9 +45,12 @@ const register = async (req, res) => {
         firstName,
         lastName,
         middleName,
-
       });
-      res.redirect(307, '/auth/login');
+      req.session.newUser = newUser.firstName;
+      req.session.userID = newUser.userID;
+      req.session.save(() => {
+        res.redirect(307, '/auth/login');
+      });
     } else throw new Error('All fields are required');
   } catch (error) {
     if (error.errors) { res.status(400).json({ message: error.errors[0].message }); } else res.status(400).json({ message: error.message });

@@ -10,7 +10,7 @@ module.exports = function RegisterPage() {
             <div className="heading">
               <h1 className="text text-large">Регистрация</h1>
             </div>
-            <form name="signin" className="form">
+            <form name="signin" className="form" action="/auth/register" method="POST">
               <div className="form-outline mb-4">
                 <label className="form-label" htmlFor="form2Example1">
                   Имя
@@ -87,10 +87,10 @@ module.exports = function RegisterPage() {
                 </div>
               </a>
               <a href="/auth/google/">
-                <div id="google" class="google">
+                <div id="google" className="google">
                   Google
-                  <div class="cover google">
-                    <li class="fa fa-google-plus fa-2x"></li>
+                  <div className="cover google">
+                    <li className="fa fa-google-plus fa-2x" />
                   </div>
                 </div>
               </a>
