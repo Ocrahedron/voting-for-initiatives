@@ -4,20 +4,32 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate({ Auth_google, Initiatives }) {
-      this.belongsTo(Auth_google, { foreignKey: 'Auth_google_id' });
-      this.belongsToMany(Initiatives, { foreignKey: 'User_id', through: 'Voites', as: 'Voite' });
-      this.hasMany(Initiatives, { foreignKey: 'User_id', as: 'creator' });
+    static associate({ Initiatives }) {
     }
   }
   User.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     middleName: DataTypes.STRING,
+    email: {
+      allowNull: false,
+      unique: true,
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true,
+        notEmpty: true,
+      },
+    },
+    password: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: true,
+      },
+    },
     federal: DataTypes.STRING,
     region: DataTypes.STRING,
     municip: DataTypes.STRING,
-    auth_google_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'User',

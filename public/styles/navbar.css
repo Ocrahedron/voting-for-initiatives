@@ -1,4 +1,5 @@
 nav {
   display: flex;
   gap: 1rem;
+  background-color: blue;
 }

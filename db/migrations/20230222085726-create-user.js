@@ -17,6 +17,22 @@ module.exports = {
       middleName: {
         type: Sequelize.STRING,
       },
+      email: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.STRING,
+        validate: {
+          isEmail: true,
+          notEmpty: true,
+        },
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+        validate: {
+          notEmpty: true,
+        },
+      },
       federal: {
         type: Sequelize.STRING,
       },
@@ -25,13 +41,6 @@ module.exports = {
       },
       municip: {
         type: Sequelize.STRING,
-      },
-      auth_google_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Auth_googles',
-          key: 'id',
-        },
       },
       createdAt: {
         allowNull: false,
