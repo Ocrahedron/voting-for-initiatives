@@ -78,6 +78,9 @@ function MainPage({ username, allInit }) {
               </div>
             </div>
           </div>
+          <div style={{
+            display:"flex", justifyContent:'space-between',
+            maxWidth:'940px',flexWrap: 'wrap'}}>
           {allInit?.map(el => (
           <div className="d-inline-block">
             <div>
@@ -184,6 +187,7 @@ function MainPage({ username, allInit }) {
             </div>
           </div>
           ))}
+          </div>
         </section>
       </div>
     </Layout>

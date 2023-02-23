@@ -3,7 +3,7 @@ const InitPage = require('../views/InitPage');
 const {Initiative} = require('../../db/models')
 
 const renderInitPage = (req, res) => {
-  // const user = req.session?.user;
+  // const user = req.session?.user| asdasdasd;
   // console.log(">>><<<<", user);
   renderTemplate(InitPage, {}, res);
 };

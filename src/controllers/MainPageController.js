@@ -9,7 +9,7 @@ const renderMainPage = async (req, res) => {
   // const user = req.session?.user;
   // console.log(">>><<<<", user);
   renderTemplate(MainPage, {allInit}, res);
-
+}
 const renderInitPage = async (req, res) => {
   const {id} = req.params
   const init = await Initiative.findOne({where:{id}})

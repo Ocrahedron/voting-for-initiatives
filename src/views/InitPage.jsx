@@ -5,7 +5,7 @@ module.exports = function InitPage({ username, init }) {
   return (
     <Layout username={username}>
       <div>
-        <div className="mx-auto" style={{ maxWidth: '1200px' }}>
+        <div className="mx-auto" style={{ maxWidth: '940px' }}>
           <section>
             <div>
               <div style={{ display: 'flex' }}>

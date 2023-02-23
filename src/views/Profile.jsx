@@ -6,7 +6,7 @@ function Profile({ username }) {
     <Layout username={username}>
       <div
         style={{
-          maxWidth: '941px',
+          maxWidth: '940px',
           margin: '0 auto',
           padding: '0 0 180px',
           paddingLeft: '10px',
@@ -19,7 +19,6 @@ function Profile({ username }) {
           <div
             style={{
               float: 'left',
-              width: '620px',
               fontSize: '14px',
               lineHeight: '21px',
               color: '#2d2d2d',
