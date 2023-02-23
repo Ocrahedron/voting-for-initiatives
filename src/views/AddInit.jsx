@@ -6,7 +6,7 @@ function AddInit({ username }) {
     <Layout username={username}>
       <div
         style={{
-          width: '940px',
+          maxWidth: '940px',
           margin: '0 auto',
           padding: '0 0 180px',
           paddingLeft: '10px',
