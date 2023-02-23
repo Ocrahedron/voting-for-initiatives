@@ -5,18 +5,18 @@ module.exports = function InitPage({ username, init }) {
   return (
     <Layout username={username}>
       <div>
-        <div className="mx-auto" style={{ maxWidth: "1200px" }}>
+        <div className="mx-auto" style={{ maxWidth: '1200px' }}>
           <section>
             <div>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: 'flex' }}>
                 <div>
                   <small>Инициатива №</small>
                   <small
                     style={{
-                      marginLeft: "5px",
-                      marginRight: "30px",
-                      background: "#1539ba",
-                      color: "rgb(255,255,255)",
+                      marginLeft: '5px',
+                      marginRight: '30px',
+                      background: '#1539ba',
+                      color: 'rgb(255,255,255)',
                     }}
                   >
                     {init.id}
@@ -26,9 +26,9 @@ module.exports = function InitPage({ username, init }) {
                   <small>Уровень инициативы:</small>
                   <small
                     style={{
-                      paddingRight: "0px",
-                      marginBottom: "0px",
-                      marginLeft: "5px",
+                      paddingRight: '0px',
+                      marginBottom: '0px',
+                      marginLeft: '5px',
                     }}
                   >
                     {init.level}
@@ -40,37 +40,39 @@ module.exports = function InitPage({ username, init }) {
               </h1>
               <div
                 style={{
-                  paddingTop: "20px",
-                  paddingRight: "20px",
-                  paddingLeft: "20px",
-                  paddingBottom: "40px",
+                  paddingTop: '20px',
+                  paddingRight: '20px',
+                  paddingLeft: '20px',
+                  paddingBottom: '40px',
                   // background: "var(--bs-gray-400)",
-                  marginBottom: "5px",
+                  marginBottom: '5px',
                 }}
               >
                 <div>
+
                   <p style={{ fontWeight: "bold", paddingBottom: "1px" }}>
                     {init.status}
+
                   </p>
                 </div>
                 <div
                   style={{
-                    fontSize: "25px",
-                    fontWeight: "bold",
-                    marginTop: "-4px",
-                    marginBottom: "9px",
+                    fontSize: '25px',
+                    fontWeight: 'bold',
+                    marginTop: '-4px',
+                    marginBottom: '9px',
                   }}
                 >
                   <p>{init.data_end}</p>
                 </div>
                 <div>
-                  <div className="progress" style={{ height: "20px" }}>
+                  <div className="progress" style={{ height: '20px' }}>
                     <div
                       className="progress-bar"
                       aria-valuenow="50"
                       aria-valuemin="0"
                       aria-valuemax="100"
-                      style={{ width: "50%" }}
+                      style={{ width: '50%' }}
                     >
                       50%
                     </div>
@@ -108,11 +110,11 @@ module.exports = function InitPage({ username, init }) {
               <div
                 style={{
                   // background: "var(--bs-gray-400)",
-                  paddingTop: "20px",
-                  paddingRight: "20px",
-                  paddingBottom: "40px",
-                  paddingLeft: "20px",
-                  marginBottom: "20px",
+                  paddingTop: '20px',
+                  paddingRight: '20px',
+                  paddingBottom: '40px',
+                  paddingLeft: '20px',
+                  marginBottom: '20px',
                 }}
               >
                 <div>
@@ -124,7 +126,7 @@ module.exports = function InitPage({ username, init }) {
                   Практический результат
                 </h2>
                 <div>
-                  <p style={{ paddingBottom: "20px" }}>
+                  <p style={{ paddingBottom: '20px' }}>
                     Диспансеризация, профилактика и комплексное лечение
                     стоматологических заболеваний должны дать снижение обращений
                     граждан за стоматологической помощью.&nbsp,Вложение в
@@ -135,30 +137,30 @@ module.exports = function InitPage({ username, init }) {
                   </p>
                 </div> */}
               </div>
-              <h1 style={{ paddingBottom: "20px" }}>Решение</h1>
+              <h1 style={{ paddingBottom: '20px' }}>Решение</h1>
               <div
                 style={{
-                  borderRadius: "5px",
-                  borderStyle: "solid",
-                  borderColor: "var(--bs-gray-700)",
-                  marginBottom:'50px'
+                  borderRadius: '5px',
+                  borderStyle: 'solid',
+                  borderColor: 'var(--bs-gray-700)',
+                  marginBottom: '50px',
                 }}
               >
                 {/* <div>
                   <div
                     style={{
-                      paddingTop: "20px",
-                      paddingRight: "20px",
-                      paddingBottom: "40px",
-                      paddingLeft: "20px",
-                      marginLeft: "0px",
-                      marginBottom: "20px",
+                      paddingTop: '20px',
+                      paddingRight: '20px',
+                      paddingBottom: '40px',
+                      paddingLeft: '20px',
+                      marginLeft: '0px',
+                      marginBottom: '20px',
                     }}
                   >
                     <p
                       style={{
                         // background: "var(--bs-gray-400)",
-                        paddingBottom: "20px",
+                        paddingBottom: '20px',
                       }}
                     >
                       Обеспечить население Российской Федерации бесплатной
@@ -166,13 +168,16 @@ module.exports = function InitPage({ username, init }) {
                       <br />
                     </p>
                   </div>
+
                 </div> */}
                 <div id="container" style={{ margin: "0 20px" }}>
+                </div>
+                <div style={{ margin: '0 20px' }}>
                   <div
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "unset",
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'unset',
                     }}
                   >
                     <button
@@ -180,27 +185,27 @@ module.exports = function InitPage({ username, init }) {
                     value={init.id}
                       className="btn btn-primary"
                       type="button"
-                      style={{ background: "var(--bs-green)", width: "36px" }}
+                      style={{ background: 'var(--bs-green)', width: '36px' }}
                     >
                       +
                     </button>
                     <div
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginLeft: "5px",
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginLeft: '5px',
                       }}
                     >
-                      <p style={{ marginTop: "revert" }}>
+                      <p style={{ marginTop: 'revert' }}>
                         Голосовать за решение
                       </p>
                     </div>
                   </div>
                   <div
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "unset",
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'unset',
                     }}
                   >
                     <button
@@ -209,21 +214,21 @@ module.exports = function InitPage({ username, init }) {
                       className="btn btn-primary"
                       type="button"
                       style={{
-                        background: "var(--bs-red)",
-                        width: "36px",
-                        height: "36px",
+                        background: 'var(--bs-red)',
+                        width: '36px',
+                        height: '36px',
                       }}
                     >
                       -
                     </button>
                     <div
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginLeft: "5px",
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginLeft: '5px',
                       }}
                     >
-                      <p style={{ marginTop: "revert" }}>
+                      <p style={{ marginTop: 'revert' }}>
                         Голосовать против решения
                       </p>
                     </div>

@@ -525,3 +525,71 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.containerAuthBody{
+  margin-top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+}
+
+.containerAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.commonBody{
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 10px 10px 10px 10px #1a191f;
+  border-radius: 10px;
+  padding: 25px 60px 40px;
+  /* background-color: #1b1818; */
+  background-color: rgb(33 37 41);
+  margin-bottom: 25px;
+}
+
+.authInput{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputexample {
+  color: #878587;
+	width: 100%;
+	padding: 15px 20px;
+	background: var(--agrey);
+  border-radius: 10px;
+  font-size: inherit;
+  border-color: #fff;
+}
+
+.authBtn{
+  position: relative;
+  margin-top: 10px;
+}
+
+.btnAuth{
+  background-color: #951234;
+  transition: all .1s linear;
+  width: 100%;
+  min-height: 53px;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: inherit;
+}
+
+.authH3 {
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 37px;
+}
+.spanText{
+  color: white;
+}

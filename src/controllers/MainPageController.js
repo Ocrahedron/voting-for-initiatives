@@ -3,14 +3,12 @@ const MainPage = require('../views/MainPage');
 const InitPage = require('../views/InitPage')
 const {Initiative} = require('../../db/models')
 
+
 const renderMainPage = async (req, res) => {
   const allInit = await Initiative.findAll()
   // const user = req.session?.user;
   // console.log(">>><<<<", user);
   renderTemplate(MainPage, {allInit}, res);
-};
-
-
 
 const renderInitPage = async (req, res) => {
   const {id} = req.params
