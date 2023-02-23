@@ -6,11 +6,7 @@ function AddInit({ username }) {
     <Layout username={username}>
       <div
         style={{
-<<<<<<< HEAD
           maxWidth: '940px',
-=======
-          width: '940px',
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
           margin: '0 auto',
           padding: '0 0 180px',
           paddingLeft: '10px',
@@ -83,11 +79,7 @@ function AddInit({ username }) {
                     aria-valuenow="50"
                     aria-valuemin="0"
                     aria-valuemax="100"
-<<<<<<< HEAD
-                    style={{ width: '60%' }}
-=======
                     style={{ width: '50%' }}
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                   >
                     50%
                   </div>
@@ -175,14 +167,7 @@ function AddInit({ username }) {
                       id="category1"
                       value="Транспорт и дороги"
                     />
-<<<<<<< HEAD
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-=======
                     <label className="form-check-label" htmlFor="flexRadioDefault1">
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                       Транспорт и дороги
                     </label>
                   </div>
@@ -194,14 +179,7 @@ function AddInit({ username }) {
                       id="category2"
                       value="Природные ресурсы и экология"
                     />
-<<<<<<< HEAD
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-=======
                     <label className="form-check-label" htmlFor="flexRadioDefault1">
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                       Природные ресурсы и экология
                     </label>
                   </div>
@@ -213,34 +191,10 @@ function AddInit({ username }) {
                       id="category3"
                       value="Инфраструктура города"
                     />
-<<<<<<< HEAD
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-                      Инфраструктура города
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-                      Жилые дома и дворы
-                    </label>
-                  </div>
-=======
                     <label className="form-check-label" htmlFor="flexRadioDefault1">
                       Инфраструктура города
                     </label>
                   </div>
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                 </div>
                 <h3
                   style={{
@@ -430,11 +384,7 @@ function AddInit({ username }) {
                   Выберите уровень инициативы
                 </h3>
                 <select
-<<<<<<< HEAD
-                  name=""
-=======
                   name="select"
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                   className="form-select"
                   style={{
                     background: '#fff',
@@ -500,25 +450,7 @@ function AddInit({ username }) {
                     height: '238px',
                     marginBottom: '20px',
                   }}
-<<<<<<< HEAD
-                />
-                <h3
-                  style={{
-                    margin: '0 0 6px',
-                    color: '#403C39',
-                    fontSize: '24px',
-                    fontWeight: 'bold',
-                    padding: '0 0 19px',
-                  }}
-                >
-                  Время
-                </h3>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-                  <input name="time" type="date" />
-                </div>
-=======
                 /> */}
->>>>>>> 71fa6f5cddb31d43b272be6c70385dbf07d4b95b
                 <div>
                   <div className="d-flex justify-content-center">
                     <button className="btn btn-primary" type="submit">

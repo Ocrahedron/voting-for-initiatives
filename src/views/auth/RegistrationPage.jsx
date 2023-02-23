@@ -12,7 +12,7 @@ module.exports = function RegisterPage() {
             </div>
             <form name="signin" className="form">
               <div className="form-outline mb-4">
-              <label className="form-label" htmlFor="form2Example1">
+                <label className="form-label" htmlFor="form2Example1">
                   Имя
                 </label>
                 <input
@@ -21,10 +21,9 @@ module.exports = function RegisterPage() {
                   className="form-control"
                   name="firstName"
                 />
-              
               </div>
               <div className="form-outline mb-4">
-              <label className="form-label" htmlFor="form2Example1">
+                <label className="form-label" htmlFor="form2Example1">
                   Фамилия
                 </label>
                 <input
@@ -33,10 +32,9 @@ module.exports = function RegisterPage() {
                   className="form-control"
                   name="lastName"
                 />
-               
               </div>
               <div className="form-outline mb-4">
-              <label className="form-label" htmlFor="form2Example1">
+                <label className="form-label" htmlFor="form2Example1">
                   Отчество
                 </label>
                 <input
@@ -45,10 +43,9 @@ module.exports = function RegisterPage() {
                   className="form-control"
                   name="middleName"
                 />
-              
               </div>
               <div className="form-outline mb-4">
-              <label className="form-label" htmlFor="form2Example1">
+                <label className="form-label" htmlFor="form2Example1">
                   Email
                 </label>
                 <input
@@ -57,11 +54,10 @@ module.exports = function RegisterPage() {
                   className="form-control"
                   name="email"
                 />
-              
               </div>
 
               <div className="form-outline mb-4">
-              <label className="form-label" htmlFor="form2Example2">
+                <label className="form-label" htmlFor="form2Example2">
                   Пароль
                 </label>
                 <input
@@ -70,7 +66,6 @@ module.exports = function RegisterPage() {
                   className="form-control"
                   name="password"
                 />
-              
               </div>
               <button
                 type="button"
@@ -80,14 +75,25 @@ module.exports = function RegisterPage() {
               >
                 Register
               </button>
-              <br/>
+              <br />
               <div className="heading">
-              <h5 className="text text-large">Авторизируйтесь с помощью:</h5>
-            </div>  
-              <a href="/auth/google"><div id='google' class='google'>Google
-  <div class='cover google'><li class="fa fa-google-plus fa-2x" ></li></div>
-  </div></a>
-
+                <h5 className="text text-large">Авторизуйтесь с помощью:</h5>
+              </div>
+              <a href="/auth/google/">
+                <div className="d-flex justify-content-center">
+                  <button className="btn btn-primary" type="submit">
+                    Отправить
+                  </button>
+                </div>
+              </a>
+              <a href="/auth/google/">
+                <div id="google" class="google">
+                  Google
+                  <div class="cover google">
+                    <li class="fa fa-google-plus fa-2x"></li>
+                  </div>
+                </div>
+              </a>
             </form>
           </section>
         </div>
