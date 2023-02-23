@@ -4,7 +4,79 @@ const Layout = require('../Layout');
 module.exports = function RegisterPage() {
   return (
     <Layout>
-      <main className="main">
+      <div className="containerAuthBody">
+        <main className="mainAut">
+          <div className="containerAuth">
+            <div className="commonBody">
+              <h3 className="authH3">Регистрация аккаунта</h3>
+              <form name="signinForm" action="/auth/signin" method="post">
+                <div className="authInput">
+                  <input
+                    name="name"
+                    className="inputexample"
+                    type="text"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Имя"
+                    required
+                  ></input>
+                </div>
+                <div className="authInput">
+                  <input
+                    name="name"
+                    className="inputexample"
+                    type="text"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Фамилия"
+                    required
+                  ></input>
+                </div>
+                <div className="authInput">
+                  <input
+                    name="name"
+                    className="inputexample"
+                    type="text"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Отчество"
+                    required
+                  ></input>
+                </div>
+                <div className="authInput">
+                  <input
+                    name="password"
+                    className="inputexample"
+                    type="password"
+                    className="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Пароль"
+                    required
+                  ></input>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "15px 0",
+                  }}
+                >
+                  <a href="/auth/google">
+                    <img src="/img/google-logo.png"></img>
+                  </a>
+                </div>
+                <button type="submit" className="btnAuth">
+                  Регистрация
+                </button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+      {/* <main className="main">
         <div className="container">
           <section className="wrapper">
             <div className="heading">
@@ -97,7 +169,7 @@ module.exports = function RegisterPage() {
             </form>
           </section>
         </div>
-      </main>
+      </main> */}
     </Layout>
   );
 };

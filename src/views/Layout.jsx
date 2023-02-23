@@ -23,10 +23,10 @@ module.exports = function Layout({ children, user }) {
         <script defer src="/js/application.js" /> */}
         <title>Votes</title>
       </head>
-      <body style={{background: 'var(--bs-gray-600)'}}>
+      <body style={{ background: "var(--bs-gray-600)" }}>
       
         <Navbar user={user} />
-        {children}
+        <main>{children}</main>
       
       </body>
     </html>
