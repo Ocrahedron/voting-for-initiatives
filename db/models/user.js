@@ -4,29 +4,17 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate({ Initiatives }) {
+    static associate({ Initiative, Voite }) {
+      this.belongsToMany(Initiative, { foreignKey: 'user_id', through: Voite });
+      this.hasMany(Initiative, { foreignKey: 'user_id', as: 'creator' });
     }
   }
   User.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     middleName: DataTypes.STRING,
-    email: {
-      allowNull: false,
-      unique: true,
-      type: DataTypes.STRING,
-      validate: {
-        isEmail: true,
-        notEmpty: true,
-      },
-    },
-    password: {
-      allowNull: false,
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: true,
-      },
-    },
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
     federal: DataTypes.STRING,
     region: DataTypes.STRING,
     municip: DataTypes.STRING,

@@ -4,7 +4,15 @@ const Layout = require('./Layout');
 function MainPage({ username }) {
   return (
     <Layout username={username}>
-      <div className="mx-auto" style={{ width: '1200px' }}>
+      <div className="mx-auto" style={{ maxWidth: '940px' }}>
+        <iframe
+          allowfullscreen=""
+          frameBorder="0"
+          src="https://cdn.bootstrapstudio.io/placeholders/map.html"
+          style={{ width: '100%', height: '400' }}
+        />
+      </div>
+      <div className="mx-auto" style={{ maxWidth: '940px' }}>
         <section>
           <div className="d-flex">
             <div>
@@ -17,17 +25,20 @@ function MainPage({ username }) {
                 >
                   Уровень
                 </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    First Item
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Second Item
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Third Item
-                  </a>
-                </div>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp; Федеральные
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp; Региональные
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp; Муниципальные
+                  </li>
+                </ul>
               </div>
             </div>
             <div>
@@ -40,17 +51,84 @@ function MainPage({ username }) {
                 >
                   Фильтр по разделам
                 </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    First Item
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Second Item
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Third Item
-                  </a>
-                </div>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Транспорт и дороги
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Природные ресурсы и экология
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Инфраструктура города
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Жилые дома и дворы
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Безопасность
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Бизнес
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Потребители и сервис
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Чиновники и гос. услуги
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Население и миграция
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Избирательное право
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Экономика и финансы
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Здравоохранение
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Образование и наука
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Уголовный кодекс
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Государственное управление
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;ЖКХ, УК, ТСЖ
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Государственная поддержка
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Труд и занятость
+                  </li>
+                  <li className="dropdown-item">
+                    <input type="checkbox" />
+                    &nbsp;Социальная защита
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -83,49 +161,75 @@ function MainPage({ username }) {
                       float: 'none',
                       fontSize: '18px',
                       margin: '0',
-                      padding: '7px',
+                      padding: '7px 0',
                       textAlign: 'center',
-                      width: '55px',
+                      // width: '55px',
                       position: 'absolute',
                       right: '20px',
                       top: '50%',
                       marginTop: '-23px',
-                      // fontSize: '16px',
-                      // marginTop: '-31px',
-                      // width: '85px',
+                      fontSize: '16px',
+                      marginTop: '-31px',
+                      width: '85px',
                     }}
                   >
-                    <span style={{
-                      fontSize: '14px', color: '#8f8f8f', display: 'block', marginBottom: '4px',
-                    }}
+                    <span
+                      style={{
+                        fontSize: '14px',
+                        color: '#8f8f8f',
+                        display: 'block',
+                        marginBottom: '4px',
+                      }}
                     >
                       последний голос в
                     </span>
                     <strong style={{ marginTop: '0px' }}>13:29:00</strong>
                   </div>
-                  <div style={{
-                    height: 'auto', minHeight: '42px', fontSize: '16px', lineHeight: '21px', marginRight: '95px',
-                  }}
+                  <div
+                    style={{
+                      height: 'auto',
+                      minHeight: '42px',
+                      fontSize: '16px',
+                      lineHeight: '21px',
+                      marginRight: '95px',
+                    }}
                   >
                     <a
                       href="#"
                       style={{
-                        border: '0', fontSize: '100%', font: 'inherit', verticalAlign: 'baseline', margin: '0', padding: '0',
+                        border: '0',
+                        fontSize: '100%',
+                        font: 'inherit',
+                        verticalAlign: 'baseline',
+                        margin: '0',
+                        padding: '0',
                       }}
                     >
                       Уголовная ответственность за похищение ребенка бывшим
                       супругом отдельно проживающим
                     </a>
                   </div>
-                  <div style={{
-                    margin: '0', fontSize: '12px', position: 'absolute', left: '20px', bottom: '30px',
-                  }}
+                  <div
+                    style={{
+                      margin: '0',
+                      fontSize: '12px',
+                      position: 'absolute',
+                      left: '20px',
+                      bottom: '30px',
+                    }}
                   >
                     <small>Уровень инициативы: Федеральный</small>
                   </div>
-                  <div style={{
-                    color: '#8F8F8F', fontSize: '14px', lineHeight: '18px', padding: '0', position: 'absolute', left: '20px', bottom: '10px',
-                  }}
+                  <div
+                    style={{
+                      color: '#8F8F8F',
+                      fontSize: '14px',
+                      lineHeight: '18px',
+                      padding: '0',
+                      position: 'absolute',
+                      left: '20px',
+                      bottom: '10px',
+                    }}
                   >
                     <strong>Всего 1435 голоса</strong>
                   </div>
@@ -135,7 +239,6 @@ function MainPage({ username }) {
           </div>
         </section>
       </div>
-      <script src="assets/bootstrap/js/bootstrap.min.js" />
     </Layout>
   );
 }
