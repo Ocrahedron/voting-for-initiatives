@@ -2,8 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const renderAddInit = require('../controllers/AddInitController');
+const { renderAddInitController, addInitFormController } = require('../controllers/AddInitController');
 
-router.get('/addInit', renderAddInit);
+router.get('/addInit', renderAddInitController);
+router.post('/addInit', addInitFormController);
+
 
 module.exports = router;

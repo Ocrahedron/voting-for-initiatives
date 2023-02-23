@@ -23,7 +23,7 @@ module.exports = function Layout({ children, user }) {
       <body style={{ background: 'var(--bs-gray-600)' }}>
         <nav className="navbar navbar-dark navbar-expand-md bg-dark py-3">
           <div className="container">
-            <a className="navbar-brand d-flex align-items-center" href="#">
+            <a className="navbar-brand d-flex align-items-center" href="/addInit">
               <span>Голосование за инициативы</span>
             </a>
             <button

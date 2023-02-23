@@ -50,7 +50,7 @@ function AddInit({ username }) {
                   <span>Указанная Вами информация сохраняется в автоматическим режиме при изменении данных инициативы или каждые 30 секунд. При потере доступа к сети Интернет, Вы всегда сможете открыть черновик инициативы в разделе Моя активность/Черновики.</span>
                 </div>
               </div>
-              <form>
+              <form action="/addInit" method="POST">
                 <h3 style={{
                   margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
@@ -58,6 +58,7 @@ function AddInit({ username }) {
                   Введите название инициативы
                 </h3>
                 <input
+                  name="title"
                   className="form-control"
                   type="text"
                   style={{
@@ -65,7 +66,7 @@ function AddInit({ username }) {
                   }}
                 />
                 <h3 style={{
-                  fontSize: '16px', margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
+                  margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
                 >
                   Определение категории инициативы
@@ -75,83 +76,23 @@ function AddInit({ username }) {
                 }}
                 >
                   <li>
-                    <input type="checkbox" />
+                    <input type="radio" />
 &nbsp;Транспорт и дороги
                   </li>
                   <li>
-                    <input type="checkbox" />
+                    <input type="radio" />
 &nbsp;Природные ресурсы и экология
                   </li>
                   <li>
-                    <input type="checkbox" />
+                    <input type="radio" />
 &nbsp;Инфраструктура города
                   </li>
                   <li>
-                    <input type="checkbox" />
+                    <input type="radio" />
 &nbsp;Жилые дома и дворы
                   </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Безопасность
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Бизнес
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Потребители и сервис
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Чиновники и гос. услуги
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Население и миграция
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Избирательное право
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Экономика и финансы
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Здравоохранение
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Образование и наука
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Уголовный кодекс
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Государственное управление
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;ЖКХ, УК, ТСЖ
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Государственная поддержка
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Труд и занятость
-                  </li>
-                  <li>
-                    <input type="checkbox" />
-&nbsp;Социальная защита
-                  </li>
                 </ul>
-                <h3 style={{
+                {/* <h3 style={{
                   margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
                 >
@@ -162,8 +103,8 @@ function AddInit({ username }) {
                   style={{
                     width: '598px', height: '238px', overflow: 'auto', resize: 'none', padding: '3px 5px 4px 15px', marginBottom: '20px',
                   }}
-                />
-                <h3 style={{
+                /> */}
+                {/* <h3 style={{
                   margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
                 >
@@ -185,8 +126,8 @@ function AddInit({ username }) {
                           <a href="#">или выберите файлы на компьютере...</a>
                         </div>
                       </div>
-                    </div>
-                    <input
+                    </div> */}
+                {/* <input
                       className="form-control"
                       type="file"
                       style={{
@@ -194,8 +135,8 @@ function AddInit({ username }) {
                       }}
                     />
                   </div>
-                </div>
-                <h3 style={{
+                </div> */}
+                {/* <h3 style={{
                   margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
                 >
@@ -226,8 +167,8 @@ function AddInit({ username }) {
                       }}
                     />
                   </div>
-                </div>
-                <h3 style={{
+                </div> */}
+                {/* <h3 style={{
                   margin: '0 0 6px', color: '#403C39', fontSize: '24px', fontWeight: 'bold', padding: '0 0 19px',
                 }}
                 >
@@ -258,9 +199,11 @@ function AddInit({ username }) {
                 >
                   Практический результат
                 </h3>
-                <textarea className="form-control" style={{ width: '598px', height: '238px', marginBottom: '20px' }} />
-                <div>
-                  <div className="d-flex justify-content-center"><button className="btn btn-primary" type="button">Отправить</button></div>
+                <textarea className="form-control" style={{ width: '598px', height: '238px', marginBottom: '20px' }} /> */}
+
+                <div className="d-flex justify-content-center">
+                  <button className="btn btn-primary" type="submit">Отправить</button>
+
                 </div>
               </form>
             </div>
