@@ -4,15 +4,25 @@ const Layout = require('./Layout');
 function MainPage({ username }) {
   return (
     <Layout username={username}>
-      <div className="mx-auto" style={{ maxWidth: '940px' }}>
+      <div
+        className="mx-auto"
+        style={{ maxWidth: "940px", display: "flex", alignItems: "center" }}
+      >
         <iframe
           allowfullscreen=""
           frameBorder="0"
           src="https://cdn.bootstrapstudio.io/placeholders/map.html"
-          style={{ width: '100%', height: '400' }}
+          style={{ width: "100%", height: "400" }}
         />
+        <div style={{ marginLeft: "5px" }}>
+          <a href="/addInit">
+            <button type="button" class="btn btn-success btn-lg">
+              Опубликовать инициативу
+            </button>
+          </a>
+        </div>
       </div>
-      <div className="mx-auto" style={{ maxWidth: '940px' }}>
+      <div className="mx-auto" style={{ maxWidth: "940px" }}>
         <section>
           <div className="d-flex">
             <div>
@@ -137,72 +147,72 @@ function MainPage({ username }) {
               <div
                 className="d-inline-block"
                 style={{
-                  verticalAlign: 'top',
-                  display: 'inline-block',
-                  zoom: '1',
-                  width: '460px',
-                  margin: '0',
+                  verticalAlign: "top",
+                  display: "inline-block",
+                  zoom: "1",
+                  width: "460px",
+                  margin: "0",
                 }}
               >
                 <div
                   style={{
-                    background: '#F6F6F6',
-                    margin: '0 0 10px',
-                    padding: '10px 20px 60px',
-                    position: 'relative',
-                    borderRadius: '4px',
-                    minHeight: '80px',
+                    background: "#F6F6F6",
+                    margin: "0 0 10px",
+                    padding: "10px 20px 60px",
+                    position: "relative",
+                    borderRadius: "4px",
+                    minHeight: "80px",
                   }}
                 >
                   <div
                     style={{
-                      background: '#FFFFFF',
-                      color: '#403C39',
-                      float: 'none',
-                      fontSize: '18px',
-                      margin: '0',
-                      padding: '7px 0',
-                      textAlign: 'center',
+                      background: "#FFFFFF",
+                      color: "#403C39",
+                      float: "none",
+                      fontSize: "18px",
+                      margin: "0",
+                      padding: "7px 0",
+                      textAlign: "center",
                       // width: '55px',
-                      position: 'absolute',
-                      right: '20px',
-                      top: '50%',
-                      marginTop: '-23px',
-                      fontSize: '16px',
-                      marginTop: '-31px',
-                      width: '85px',
+                      position: "absolute",
+                      right: "20px",
+                      top: "50%",
+                      marginTop: "-23px",
+                      fontSize: "16px",
+                      marginTop: "-31px",
+                      width: "85px",
                     }}
                   >
                     <span
                       style={{
-                        fontSize: '14px',
-                        color: '#8f8f8f',
-                        display: 'block',
-                        marginBottom: '4px',
+                        fontSize: "14px",
+                        color: "#8f8f8f",
+                        display: "block",
+                        marginBottom: "4px",
                       }}
                     >
                       последний голос в
                     </span>
-                    <strong style={{ marginTop: '0px' }}>13:29:00</strong>
+                    <strong style={{ marginTop: "0px" }}>13:29:00</strong>
                   </div>
                   <div
                     style={{
-                      height: 'auto',
-                      minHeight: '42px',
-                      fontSize: '16px',
-                      lineHeight: '21px',
-                      marginRight: '95px',
+                      height: "auto",
+                      minHeight: "42px",
+                      fontSize: "16px",
+                      lineHeight: "21px",
+                      marginRight: "95px",
                     }}
                   >
                     <a
                       href="#"
                       style={{
-                        border: '0',
-                        fontSize: '100%',
-                        font: 'inherit',
-                        verticalAlign: 'baseline',
-                        margin: '0',
-                        padding: '0',
+                        border: "0",
+                        fontSize: "100%",
+                        font: "inherit",
+                        verticalAlign: "baseline",
+                        margin: "0",
+                        padding: "0",
                       }}
                     >
                       Уголовная ответственность за похищение ребенка бывшим
@@ -211,24 +221,24 @@ function MainPage({ username }) {
                   </div>
                   <div
                     style={{
-                      margin: '0',
-                      fontSize: '12px',
-                      position: 'absolute',
-                      left: '20px',
-                      bottom: '30px',
+                      margin: "0",
+                      fontSize: "12px",
+                      position: "absolute",
+                      left: "20px",
+                      bottom: "30px",
                     }}
                   >
                     <small>Уровень инициативы: Федеральный</small>
                   </div>
                   <div
                     style={{
-                      color: '#8F8F8F',
-                      fontSize: '14px',
-                      lineHeight: '18px',
-                      padding: '0',
-                      position: 'absolute',
-                      left: '20px',
-                      bottom: '10px',
+                      color: "#8F8F8F",
+                      fontSize: "14px",
+                      lineHeight: "18px",
+                      padding: "0",
+                      position: "absolute",
+                      left: "20px",
+                      bottom: "10px",
                     }}
                   >
                     <strong>Всего 1435 голоса</strong>
