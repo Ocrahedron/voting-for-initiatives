@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function MainPage({ username }) {
   return (
     <Layout username={username}>
-      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
+      <div className="mx-auto" style={{ maxWidth: '940px' }}>
         <iframe
           allowfullscreen=""
           frameBorder="0"
@@ -12,7 +12,7 @@ function MainPage({ username }) {
           style={{ width: '100%', height: '400' }}
         />
       </div>
-      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
+      <div className="mx-auto" style={{ maxWidth: '940px' }}>
         <section>
           <div className="d-flex">
             <div>

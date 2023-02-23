@@ -8,14 +8,18 @@ module.exports = function Layout({ children, user }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/Roboto.css" />
-        <link rel="stylesheet" href="/css/Roboto%20Slab.css" />
-        <link rel="stylesheet" href="/css/Banner-Heading-Image-images.css" />
         <link rel="stylesheet" href="/css/Black-Navbar.css" />
-        <link rel="stylesheet" href="/css/Login-with-overlay-image.css" />
-        <link
-          rel="stylesheet"
-          href="/css/Navbar-Centered-Brand-Dark-icons.css"
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+          integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+          crossOrigin="anonymous"
+        />
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+          integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+          crossOrigin="anonymous"
         />
         <title>Document</title>
       </head>
@@ -61,7 +65,7 @@ module.exports = function Layout({ children, user }) {
           </div>
         </nav>
         {children}
-        <script defer src="/js/bootstrap.min.js" />
+        {/* <script defer src="assets/bootstrap/js/bootstrap.min.js" /> */}
       </body>
     </html>
   );

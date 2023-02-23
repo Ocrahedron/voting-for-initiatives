@@ -5,11 +5,26 @@ function Profile({ username }) {
   return (
     <Layout username={username}>
       <div
-        className="mx-auto"
-        style={{ maxWidth: '1200px', display: 'flex', marginTop: '30px' }}
+        style={{
+          maxWidth: '941px',
+          margin: '0 auto',
+          padding: '0 0 180px',
+          paddingLeft: '10px',
+          paddingRight: '10px',
+        }}
       >
-        <div className="m-auto" style={{ padding: '0 5px' }}>
-          <div>
+        <section
+          style={{ display: 'flex', width: '100%', justifyContent: 'center' }}
+        >
+          <div
+            style={{
+              float: 'left',
+              width: '620px',
+              fontSize: '14px',
+              lineHeight: '21px',
+              color: '#2d2d2d',
+            }}
+          >
             <h3>Личная информация</h3>
             <div>
               <div style={{ marginBottom: '30px' }}>
@@ -130,7 +145,7 @@ function Profile({ username }) {
               </form>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

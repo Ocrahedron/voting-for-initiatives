@@ -7,6 +7,7 @@ const renderAddInitController = (req, res) => {
   // console.log(">>><<<<", user);
   // console.log('renderAddInitController', req.body);
   renderTemplate(AddInitPage, {}, res);
+  console.log(req.body);
 };
 
 const addInitFormController = async (req, res) => {
