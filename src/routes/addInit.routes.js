@@ -7,7 +7,4 @@ const { renderAddInitController, addInitFormController } = require('../controlle
 router.get('/addInit', renderAddInitController);
 router.post('/addInit', addInitFormController);
 
-
-
-
 module.exports = router;
