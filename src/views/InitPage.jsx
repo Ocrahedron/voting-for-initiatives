@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function InitPage({ username }) {
+module.exports = function InitPage({ username, init }) {
   return (
     <Layout username={username}>
       <div>
@@ -19,7 +19,7 @@ module.exports = function InitPage({ username }) {
                       color: 'rgb(255,255,255)',
                     }}
                   >
-                    50Ф25204
+                    {init.id}
                   </small>
                 </div>
                 <div>
@@ -31,13 +31,12 @@ module.exports = function InitPage({ username }) {
                       marginLeft: '5px',
                     }}
                   >
-                    Федеральный
+                    {init.level}
                   </small>
                 </div>
               </div>
               <h1>
-                Обеспечить население Российской Федерации бесплатной
-                стоматологической помощью
+                {init.title}
               </h1>
               <div
                 style={{
@@ -50,8 +49,10 @@ module.exports = function InitPage({ username }) {
                 }}
               >
                 <div>
-                  <p style={{ fontWeight: 'bold', paddingBottom: '1px' }}>
-                    Голосование закончится
+
+                  <p style={{ fontWeight: "bold", paddingBottom: "1px" }}>
+                    {init.status}
+
                   </p>
                 </div>
                 <div
@@ -62,7 +63,7 @@ module.exports = function InitPage({ username }) {
                     marginBottom: '9px',
                   }}
                 >
-                  <p>22-02-2024</p>
+                  <p>{init.data_end}</p>
                 </div>
                 <div>
                   <div className="progress" style={{ height: '20px' }}>
@@ -80,18 +81,23 @@ module.exports = function InitPage({ username }) {
                 <div>
                   <div className="d-flex">
                     <p>За инициативу подано:</p>
-                    <span
-                      style={{ marginLeft: '5px', color: 'var(--bs-success)' }}
+                    <span 
+                    id='spanYes'
+                    value={init.id}
+                      style={{ marginLeft: "5px", color: "var(--bs-success)" }}
                     >
-                      115 голосов
+                      {init.voites_yes} голосов
                     </span>
                   </div>
                 </div>
                 <div>
                   <div className="d-flex">
                     <p>Против инициативы подано:</p>
-                    <span style={{ marginLeft: '5px', color: 'var(--bs-red)' }}>
-                      23 голоса
+                    <span 
+                     id='spanNo'
+                     value={init.id}
+                    style={{ marginLeft: "5px", color: "var(--bs-red)" }}>
+                    {init.voites_no} голоса
                     </span>
                   </div>
                 </div>
@@ -112,24 +118,11 @@ module.exports = function InitPage({ username }) {
                 }}
               >
                 <div>
-                  <p style={{ paddingBottom: '20px' }}>
-                    За последние десятилетия поражаемость населения Российской
-                    Федерации кариесом зубов резко повысилась, особенно у детей.
-                    На долю кариеса зубов и его осложнений (пульпит,
-                    периодонтит, периостит и др.) приходится более 60% объёма
-                    стоматологической помощи, требующей существенных трудовых
-                    затрат и материально-технических ресурсов. При
-                    несвоевременной профилактике и лечении кариеса зубов
-                    (включая временный прикус - временные зубы) возникают
-                    осложнения: пульпит, периодонтит, периостит вплоть до
-                    одонтогенных воспалительных процессов, в итоге может иметь
-                    место выпадание зубов, требующее их протезирования,
-                    связанного со значительными материальными расходами.
-                    Заболевание слизистой оболочки рта (особенно пародонтиты)
-                    приводят к расшатыванию.
+                  <p style={{ paddingBottom: "20px" }}>
+                   {init.body}
                   </p>
                 </div>
-                <h2 style={{ paddingBottom: '20px' }}>
+                {/* <h2 style={{ paddingBottom: "20px" }}>
                   Практический результат
                 </h2>
                 <div>
@@ -142,7 +135,7 @@ module.exports = function InitPage({ username }) {
                     эффект, включая экономию на лечение "вторичных" заболеваний
                     организма.
                   </p>
-                </div>
+                </div> */}
               </div>
               <h1 style={{ paddingBottom: '20px' }}>Решение</h1>
               <div
@@ -153,7 +146,7 @@ module.exports = function InitPage({ username }) {
                   marginBottom: '50px',
                 }}
               >
-                <div>
+                {/* <div>
                   <div
                     style={{
                       paddingTop: '20px',
@@ -175,6 +168,9 @@ module.exports = function InitPage({ username }) {
                       <br />
                     </p>
                   </div>
+
+                </div> */}
+                <div id="container" style={{ margin: "0 20px" }}>
                 </div>
                 <div style={{ margin: '0 20px' }}>
                   <div
@@ -185,6 +181,8 @@ module.exports = function InitPage({ username }) {
                     }}
                   >
                     <button
+                    name="yesButton"
+                    value={init.id}
                       className="btn btn-primary"
                       type="button"
                       style={{ background: 'var(--bs-green)', width: '36px' }}
@@ -201,7 +199,6 @@ module.exports = function InitPage({ username }) {
                       <p style={{ marginTop: 'revert' }}>
                         Голосовать за решение
                       </p>
-                      <span>(879 голосов)</span>
                     </div>
                   </div>
                   <div
@@ -212,6 +209,8 @@ module.exports = function InitPage({ username }) {
                     }}
                   >
                     <button
+                    name="noButton"
+                    value={init.id}
                       className="btn btn-primary"
                       type="button"
                       style={{
@@ -232,7 +231,6 @@ module.exports = function InitPage({ username }) {
                       <p style={{ marginTop: 'revert' }}>
                         Голосовать против решения
                       </p>
-                      <span>(30 голосов)</span>
                     </div>
                   </div>
                   <div className="alert alert-success" role="alert">
@@ -246,20 +244,6 @@ module.exports = function InitPage({ username }) {
                     Для рассмотрения решения на федеральном уровне осталось 99
                     121 голос
                   </p>
-                  <div>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        aria-valuenow="50"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={{ width: '50%' }}
-                      >
-                        50%
-                      </div>
-                    </div>
-                  </div>
-                  <p>Против решения: 30 голосов</p>
                 </div>
               </div>
             </div>
