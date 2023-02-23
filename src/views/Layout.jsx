@@ -14,10 +14,10 @@ module.exports = function Layout({ children, user }) {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
         /> */}
-        {/* <script
+        <script
           defer
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        /> */}
+        />
         <script defer src="/js/myRedirect.js" />
         <script defer src="/js/mySubmit.js" />
         <script defer src="/js/application.js" />

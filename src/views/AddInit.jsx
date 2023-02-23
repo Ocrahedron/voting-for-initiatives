@@ -19,7 +19,6 @@ function AddInit({ username }) {
           <div
             style={{
               float: 'left',
-              width: '620px',
               fontSize: '14px',
               lineHeight: '21px',
               color: '#2d2d2d',
@@ -65,7 +64,6 @@ function AddInit({ username }) {
                 style={{
                   background: '#fff',
                   border: '1px solid #a2a2a2',
-                  width: '618px',
                   margin: '0 0 16px',
                   position: 'relative',
                   '-webkit-border-radius': '12px',
