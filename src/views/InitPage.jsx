@@ -45,7 +45,7 @@ module.exports = function InitPage({ username }) {
                   paddingRight: "20px",
                   paddingLeft: "20px",
                   paddingBottom: "40px",
-                  background: "var(--bs-gray-400)",
+                  // background: "var(--bs-gray-400)",
                   marginBottom: "5px",
                 }}
               >
@@ -103,7 +103,7 @@ module.exports = function InitPage({ username }) {
               </div>
               <div
                 style={{
-                  background: "var(--bs-gray-400)",
+                  // background: "var(--bs-gray-400)",
                   paddingTop: "20px",
                   paddingRight: "20px",
                   paddingBottom: "40px",
@@ -166,7 +166,7 @@ module.exports = function InitPage({ username }) {
                   >
                     <p
                       style={{
-                        background: "var(--bs-gray-400)",
+                        // background: "var(--bs-gray-400)",
                         paddingBottom: "20px",
                       }}
                     >
