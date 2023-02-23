@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     federal: DataTypes.STRING,
     region: DataTypes.STRING,
     municip: DataTypes.STRING,
-    auth_google_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'User',
