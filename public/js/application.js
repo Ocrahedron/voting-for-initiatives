@@ -86,6 +86,7 @@ mainContainer.addEventListener('click', async (event) => {
   }
 });
 
+//todo
 fetch('http://localhost:3000/auth/google', {
   credentials: "include"
 });

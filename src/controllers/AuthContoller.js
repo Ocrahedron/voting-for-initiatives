@@ -34,9 +34,9 @@ const renderRegistrationPage = async (req, res) => {
 const register = async (req, res) => {
   try {
     const {
-      email, password, firstName, lastName,
+      email, password, firstName, lastName,middleName
     } = req.body;
-    if (email && password && firstName && lastName) {
+    if (email && password && firstName && lastName && middleName) {
       const salt = await bcrypt.genSalt(10);
       const hashPassword = await bcrypt.hash(password, salt);
       const newUser = await User.create({
@@ -44,6 +44,8 @@ const register = async (req, res) => {
         password: hashPassword,
         firstName,
         lastName,
+        middleName,
+
       });
       res.redirect(307, '/auth/login');
     } else throw new Error('All fields are required');

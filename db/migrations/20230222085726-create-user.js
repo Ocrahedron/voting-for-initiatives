@@ -18,20 +18,6 @@ module.exports = {
         type: Sequelize.STRING,
       },
       email: {
-        allowNull: false,
-        unique: true,
-        type: Sequelize.STRING,
-        validate: {
-          isEmail: true,
-          notEmpty: true,
-        },
-      },
-      password: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        validate: {
-          notEmpty: true,
-        },
         type: Sequelize.STRING,
       },
       password: {
