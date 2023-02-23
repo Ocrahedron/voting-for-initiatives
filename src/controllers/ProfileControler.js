@@ -5,6 +5,7 @@ const renderProfilePage = (req, res) => {
   // const user = req.session?.user;
   // console.log(">>><<<<", user);
   renderTemplate(ProfilePage, {}, res);
+  console.log(req.body);
 };
 
 module.exports = renderProfilePage;
