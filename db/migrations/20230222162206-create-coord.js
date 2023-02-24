@@ -16,10 +16,10 @@ module.exports = {
         },
       },
       x: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
       },
       y: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
       },
       createdAt: {
         allowNull: false,
