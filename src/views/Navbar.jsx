@@ -4,7 +4,7 @@ module.exports = function Header({ user }) {
   return (
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="/">
           <span>Голосование за инициативы</span>
         </a>
         <button

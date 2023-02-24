@@ -11,9 +11,6 @@ const renderAddInitController = (req, res) => {
 };
 
 const addInitFormController = async (req, res) => {
-  // console.log('renderAddInitController', req.body);
-  console.log('status', req.body);
-
   try {
     await Initiative.create({
       title: req.body.title,
@@ -22,7 +19,7 @@ const addInitFormController = async (req, res) => {
       level: req.body.select,
       voites_no: 0,
       voites_yes: 0,
-      data_end: 1000 * 60 * 60 * 24 * 30,
+      data_end: new Date(1000 * 60 * 60 * 24 * 30),
       user_id: 1,
       // req.session?.user.id
       status: 'open',

@@ -1,11 +1,17 @@
 const container = document.getElementById('container')
+const yesButton = document.getElementsByName('yesButton')
 const spanYes = document.getElementById('spanYes')
 const spanNo = document.getElementById('spanNo')
+console.log("container", container)
+console.log('yesButton',yesButton)
 
 container?.addEventListener('click', async (event) => {
 try {
+  console.log('привет')
+  console.log("event.target", event.target.name)
   if (event.target.tagName === 'BUTTON'){
     if (event.target.name === 'yesButton'){
+      console.log('привет')
       const response = await fetch('/addYesVoice', {
         method: 'PUT',
         headers: {
@@ -17,9 +23,7 @@ try {
       })
       const result = await response.json()
       if (result.isAddVoiceSuccessful) {
-        spanYes.innerText= `
-        ${result.voice.voites_yes} голосов
-        `
+        spanYes.innerText= `${result.voice.voites_yes} голосов`
       }
     }
   }
@@ -45,9 +49,7 @@ container?.addEventListener('click', async (event) => {
         })
         const result = await response.json()
         if (result.isAddVoiceSuccessful) {
-          spanNo.innerText= `
-          ${result.voice.voites_no} голосов
-          `
+          spanNo.innerText= `${result.voice.voites_no} голосов`
         }
       }
     }
