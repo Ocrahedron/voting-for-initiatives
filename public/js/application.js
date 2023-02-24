@@ -1,5 +1,5 @@
-mainContainer.addEventListener('click', async (event) => {
-  event.preventDefault();
+mainContainer?.addEventListener('click', async (event) => {
+  // event.preventDefault();
 
   if (event.target.dataset.type === 'main-link') {
     await myRedirect(event, '/');

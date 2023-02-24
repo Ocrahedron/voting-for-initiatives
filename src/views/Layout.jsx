@@ -22,6 +22,8 @@ module.exports = function Layout({ children, user }) {
         <script defer src="/js/mySubmit.js" />
         <script defer src="/js/application.js" />
         <script defer src="/js/initPage.js" />
+        <script defer src="/js/mainPageFilter.js" />
+        
         <title>Votes</title>
       </head>
       <body style={{ background: "var(--bs-gray-600)" }}>

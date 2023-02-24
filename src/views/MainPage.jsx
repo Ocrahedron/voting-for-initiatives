@@ -25,9 +25,10 @@ function MainPage({ username, allInit }) {
       <div className="mx-auto" style={{ maxWidth: "940px" }}>
         <section>
           <div className="d-flex">
-            <form style={{ display: "flex" }}>
-              <div className="dropdown">
+            <form name="filterBox" style={{ display: "flex" }}>
+              <div id='levelBox' className="dropdown">
                 <button
+                  name="levelButton"
                   className="btn btn-primary dropdown-toggle"
                   aria-expanded="false"
                   data-bs-toggle="dropdown"
@@ -35,20 +36,53 @@ function MainPage({ username, allInit }) {
                 >
                   Уровень
                 </button>
-                <ul className="dropdown-menu">
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp; Федеральные
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp; Региональные
-                  </li>
-                  <li className="dropdown-item">
-                    <input type="checkbox" />
-                    &nbsp; Муниципальные
-                  </li>
-                </ul>
+                <div id='allInputsLevel' className="dropdown-menu">
+                  <div id='inputLevel1' className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="level"
+                      id="level1"
+                      value="Федеральный"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
+                      &nbsp;Федеральный
+                    </label>
+                  </div>
+                  <div className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="level"
+                      id="level2"
+                      value="Региональный"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
+                      &nbsp;Региональный
+                    </label>
+                  </div>
+                  <div className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="level"
+                      id="level3"
+                      value="Муниципальные"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
+                      &nbsp;Муниципальные
+                    </label>
+                  </div>
+                </div>
               </div>
               <div>
                 <div className="dropdown">
@@ -60,25 +94,58 @@ function MainPage({ username, allInit }) {
                   >
                     Фильтр по разделам
                   </button>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-item">
-                      <input type="checkbox" />
+                  <div className="dropdown-menu">
+                  <div className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="category"
+                      id="category1"
+                      value="Транспорт и дороги"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
                       &nbsp;Транспорт и дороги
-                    </li>
-                    <li className="dropdown-item">
-                      <input type="checkbox" />
+                    </label>
+                  </div>
+                  <div className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="category"
+                      id="category2"
+                      value="Природные ресурсы и экология"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
                       &nbsp;Природные ресурсы и экология
-                    </li>
-                    <li className="dropdown-item">
-                      <input type="checkbox" />
+                    </label>
+                  </div>
+                  <div className="dropdown-item">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="category"
+                      id="category3"
+                      value="Инфраструктура города"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexRadioDefault1"
+                    >
                       &nbsp;Инфраструктура города
-                    </li>
-                  </ul>
+                    </label>
+                    </div>
+                    </div>
                 </div>
               </div>
               <button
                 style={{ marginLeft: "5px" }}
-                type="button"
+                type="submit"
                 class="btn btn-warning"
               >
                 Фильтр
@@ -86,6 +153,7 @@ function MainPage({ username, allInit }) {
             </form>
           </div>
           <div
+            id='showAllInitsContainer'
             style={{
               display: "flex",
               justifyContent: "space-between",

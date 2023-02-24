@@ -171,7 +171,7 @@ module.exports = function InitPage({ username, init }) {
 
                 </div> */}
                 <div id="container" style={{ margin: "0 20px" }}>
-                </div>
+                
                 <div style={{ margin: '0 20px' }}>
                   <div
                     style={{
@@ -244,6 +244,7 @@ module.exports = function InitPage({ username, init }) {
                     Для рассмотрения решения на федеральном уровне осталось 99
                     121 голос
                   </p>
+                </div>
                 </div>
               </div>
             </div>
