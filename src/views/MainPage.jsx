@@ -8,12 +8,12 @@ function MainPage({ username, allInit }) {
         className="mx-auto"
         style={{ maxWidth: "940px", display: "flex", alignItems: "center" }}
       >
-        <iframe
+        {/* <iframe
           allowfullscreen=""
           frameBorder="0"
           src="https://cdn.bootstrapstudio.io/placeholders/map.html"
           style={{ width: "100%", height: "400" }}
-        />
+        /> */}
         <div style={{ marginLeft: "5px" }}>
           <a href="/addInit">
             <button type="button" class="btn btn-success btn-lg">
@@ -26,7 +26,7 @@ function MainPage({ username, allInit }) {
         <section>
           <div className="d-flex">
             <form name="filterBox" style={{ display: "flex" }}>
-              <div id='levelBox' className="dropdown">
+              <div id="levelBox" className="dropdown">
                 <button
                   name="levelButton"
                   className="btn btn-primary dropdown-toggle"
@@ -36,8 +36,8 @@ function MainPage({ username, allInit }) {
                 >
                   Уровень
                 </button>
-                <div id='allInputsLevel' className="dropdown-menu">
-                  <div id='inputLevel1' className="dropdown-item">
+                <div id="allInputsLevel" className="dropdown-menu">
+                  <div id="inputLevel1" className="dropdown-item">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -95,52 +95,52 @@ function MainPage({ username, allInit }) {
                     Фильтр по разделам
                   </button>
                   <div className="dropdown-menu">
-                  <div className="dropdown-item">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="category"
-                      id="category1"
-                      value="Транспорт и дороги"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-                      &nbsp;Транспорт и дороги
-                    </label>
-                  </div>
-                  <div className="dropdown-item">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="category"
-                      id="category2"
-                      value="Природные ресурсы и экология"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-                      &nbsp;Природные ресурсы и экология
-                    </label>
-                  </div>
-                  <div className="dropdown-item">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="category"
-                      id="category3"
-                      value="Инфраструктура города"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexRadioDefault1"
-                    >
-                      &nbsp;Инфраструктура города
-                    </label>
+                    <div className="dropdown-item">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="category"
+                        id="category1"
+                        value="Транспорт и дороги"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexRadioDefault1"
+                      >
+                        &nbsp;Транспорт и дороги
+                      </label>
                     </div>
+                    <div className="dropdown-item">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="category"
+                        id="category2"
+                        value="Природные ресурсы и экология"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexRadioDefault1"
+                      >
+                        &nbsp;Природные ресурсы и экология
+                      </label>
                     </div>
+                    <div className="dropdown-item">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="category"
+                        id="category3"
+                        value="Инфраструктура города"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="flexRadioDefault1"
+                      >
+                        &nbsp;Инфраструктура города
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
               <button
@@ -153,7 +153,7 @@ function MainPage({ username, allInit }) {
             </form>
           </div>
           <div
-            id='showAllInitsContainer'
+            id="showAllInitsContainer"
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -272,6 +272,7 @@ function MainPage({ username, allInit }) {
           </div>
         </section>
       </div>
+      <div id="map" style={{ width: "350px", height: "300px", marginTop:"70px" }}></div>
     </Layout>
   );
 }
