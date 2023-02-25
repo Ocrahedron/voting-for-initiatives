@@ -11,7 +11,13 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
       },
+      category: {
+        type: Sequelize.STRING,
+      },
       body: {
+        type: Sequelize.STRING,
+      },
+      level: {
         type: Sequelize.STRING,
       },
       voites_no: {
@@ -21,7 +27,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       data_end: {
-        type: Sequelize.STRING,
+        type: Sequelize.DATEONLY,
       },
       user_id: {
         type: Sequelize.INTEGER,

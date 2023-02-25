@@ -1,19 +1,12 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Voites', {
+    await queryInterface.createTable('Coords', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
-      },
-      user_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id',
-        },
       },
       initiative_id: {
         type: Sequelize.INTEGER,
@@ -21,6 +14,12 @@ module.exports = {
           model: 'Initiatives',
           key: 'id',
         },
+      },
+      x: {
+        type: Sequelize.FLOAT,
+      },
+      y: {
+        type: Sequelize.FLOAT,
       },
       createdAt: {
         allowNull: false,
@@ -33,6 +32,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Voites');
+    await queryInterface.dropTable('Coords');
   },
 };
